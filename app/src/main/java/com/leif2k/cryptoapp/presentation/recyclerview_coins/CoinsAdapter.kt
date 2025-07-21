@@ -1,11 +1,13 @@
-package com.leif2k.cryptoapp.presentation.recyclerview
+package com.leif2k.cryptoapp.presentation.recyclerview_coins
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.leif2k.cryptoapp.R
-import com.leif2k.cryptoapp.data.retrofit.pojo.CoinFullInfo
+import com.leif2k.cryptoapp.data.room.CoinFullInfo
 import com.leif2k.cryptoapp.databinding.ItemCoinInfoBinding
+import com.leif2k.cryptoapp.utils.IMAGE_URL_HEADER
+import com.leif2k.cryptoapp.utils.convertTimestampToTime
 import com.squareup.picasso.Picasso
 
 class CoinsAdapter : ListAdapter<CoinFullInfo, CoinViewHolder>(CoinDiffCallback()) {
@@ -29,10 +31,11 @@ class CoinsAdapter : ListAdapter<CoinFullInfo, CoinViewHolder>(CoinDiffCallback(
             tvSymbols.text = context.getString(R.string.tv_symbols, coin.ticker, coin.toSymbol)
             tvPrice.text = coin.price.toString()
             tvLastUpdate.text =
-                context.getString(R.string.tv_last_update, coin.getFormattedTime())
+                context.getString(R.string.tv_last_update, convertTimestampToTime(coin.lastUpdate))
         }
 
-        Picasso.get().load(coin.getFullImageIrl()).into(binding.ivLogoCoin)
+        val imageUrl = IMAGE_URL_HEADER + coin.imageUrl
+        Picasso.get().load(imageUrl).into(binding.ivLogoCoin)
 
         binding.root.setOnClickListener {
             onCoinClickListener?.invoke(coin)

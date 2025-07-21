@@ -6,9 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.leif2k.cryptoapp.data.retrofit.pojo.CoinFullInfo
+import com.leif2k.cryptoapp.data.room.CoinFullInfo
 import com.leif2k.cryptoapp.databinding.FragmentCoinDetailBinding
 import com.leif2k.cryptoapp.presentation.viewmodel.CoinDetailViewModel
+import com.leif2k.cryptoapp.utils.IMAGE_URL_HEADER
 import com.leif2k.cryptoapp.utils.convertTimestampToTime
 import com.squareup.picasso.Picasso
 
@@ -55,7 +56,10 @@ class CoinDetailFragment : Fragment() {
 
     private fun setViews(coinFullInfo: CoinFullInfo) {
         with(binding) {
-            Picasso.get().load(coinFullInfo.getFullImageIrl()).into(ivLogoCoin)
+
+            val imageUrl = IMAGE_URL_HEADER + coinFullInfo.imageUrl
+            Picasso.get().load(imageUrl).into(ivLogoCoin)
+
             tvCoinFullName.text = coinFullInfo.fullName
             tvSymbols.text = "(${coinFullInfo.ticker} / ${coinFullInfo.toSymbol})"
             tvPrice.text = coinFullInfo.price.toString()
@@ -64,6 +68,7 @@ class CoinDetailFragment : Fragment() {
             tvLastMarket.text = "Последняя сделка: ${coinFullInfo.lastMarket}"
             tvMarket.text = "Маркет: ${coinFullInfo.market}"
             tvChange24Hour.text = "Изменение за 24 часа: ${coinFullInfo.change24Hour}"
+
             tvLastUpdate.text = "Обновлено: " + convertTimestampToTime(coinFullInfo.lastUpdate)
         }
     }

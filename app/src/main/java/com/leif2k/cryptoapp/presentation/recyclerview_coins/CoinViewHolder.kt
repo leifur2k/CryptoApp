@@ -1,4 +1,4 @@
-package com.leif2k.cryptoapp.presentation.recyclerview
+package com.leif2k.cryptoapp.presentation.recyclerview_coins
 
 import androidx.recyclerview.widget.RecyclerView
 import com.leif2k.cryptoapp.databinding.ItemCoinInfoBinding

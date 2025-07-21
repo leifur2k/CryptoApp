@@ -7,9 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.leif2k.cryptoapp.R
-import com.leif2k.cryptoapp.data.retrofit.pojo.CoinFullInfo
 import com.leif2k.cryptoapp.databinding.FragmentCoinsBinding
-import com.leif2k.cryptoapp.presentation.recyclerview.CoinsAdapter
+import com.leif2k.cryptoapp.presentation.recyclerview_coins.CoinsAdapter
 import com.leif2k.cryptoapp.presentation.viewmodel.CoinsViewModel
 
 
