@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CryptoApp</string>
+    <string name="content_description_null">null</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_symbols">(%1$s / %2$s)</string>
+    <string name="tv_last_update">Обновлено: %1$s</string>
 </resources>

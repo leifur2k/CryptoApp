@@ -1,12 +1,13 @@
-package com.leif2k.cryptoapp.room
+package com.leif2k.cryptoapp.data.room
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.leif2k.cryptoapp.pojo.CurrencyInfo
+import com.leif2k.cryptoapp.data.retrofit.pojo.CoinFullInfo
+import com.leif2k.cryptoapp.data.retrofit.pojo.CurrencyInfo
 
-@Database(entities = [CurrencyInfo::class], version = 1, exportSchema = false)
+@Database(entities = [CoinFullInfo::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     companion object {
