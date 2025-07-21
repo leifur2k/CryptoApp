@@ -1,7 +1,7 @@
-package com.leif2k.cryptoapp.presentation.recyclerview
+package com.leif2k.cryptoapp.presentation.recyclerview_coins
 
 import androidx.recyclerview.widget.DiffUtil
-import com.leif2k.cryptoapp.data.retrofit.pojo.CoinFullInfo
+import com.leif2k.cryptoapp.data.room.CoinFullInfo
 
 class CoinDiffCallback : DiffUtil.ItemCallback<CoinFullInfo>() {
 

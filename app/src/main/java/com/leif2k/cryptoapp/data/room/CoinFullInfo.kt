@@ -1,4 +1,4 @@
-package com.leif2k.cryptoapp.data.retrofit.pojo
+package com.leif2k.cryptoapp.data.room
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -6,7 +6,6 @@ import com.leif2k.cryptoapp.utils.convertTimestampToTime
 
 @Entity(tableName = "full_price_list")
 data class CoinFullInfo(
-
     @PrimaryKey
     val ticker: String,
     val fullName: String? = null,
@@ -20,12 +19,4 @@ data class CoinFullInfo(
     val topTierVolume24HourTo: String? = null,
     val change24Hour: String? = null,
     val volume24HourToRaw: Double? = null
-) {
-    fun getFormattedTime(): String {
-        return convertTimestampToTime(lastUpdate)
-    }
-
-    fun getFullImageIrl(): String {
-        return "https://www.cryptocompare.com/$imageUrl"
-    }
-}
+)
