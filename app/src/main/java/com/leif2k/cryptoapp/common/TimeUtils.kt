@@ -1,4 +1,4 @@
-package com.leif2k.cryptoapp.utils
+package com.leif2k.cryptoapp.common
 
 import java.sql.Timestamp
 import java.text.SimpleDateFormat

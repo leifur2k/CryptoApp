@@ -5,7 +5,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.leif2k.cryptoapp.data.room.CoinFullInfo
 
 @Dao
 interface CoinsDao {

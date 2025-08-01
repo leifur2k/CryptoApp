@@ -9,8 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.leif2k.cryptoapp.data.room.CoinFullInfo
 import com.leif2k.cryptoapp.databinding.FragmentCoinDetailBinding
 import com.leif2k.cryptoapp.presentation.viewmodel.CoinDetailViewModel
-import com.leif2k.cryptoapp.utils.IMAGE_URL_HEADER
-import com.leif2k.cryptoapp.utils.convertTimestampToTime
+import com.leif2k.cryptoapp.common.IMAGE_URL_HEADER
+import com.leif2k.cryptoapp.common.convertTimestampToTime
 import com.squareup.picasso.Picasso
 
 class CoinDetailFragment : Fragment() {

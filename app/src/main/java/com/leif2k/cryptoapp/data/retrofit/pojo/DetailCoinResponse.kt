@@ -1,7 +1,5 @@
 package com.leif2k.cryptoapp.data.retrofit.pojo
 
-import com.google.gson.JsonObject
-import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 data class DetailCoinResponse(

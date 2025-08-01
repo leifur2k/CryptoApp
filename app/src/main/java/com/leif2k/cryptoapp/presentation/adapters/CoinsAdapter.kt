@@ -1,4 +1,4 @@
-package com.leif2k.cryptoapp.presentation.recyclerview_coins
+package com.leif2k.cryptoapp.presentation.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.ListAdapter
 import com.leif2k.cryptoapp.R
 import com.leif2k.cryptoapp.data.room.CoinFullInfo
 import com.leif2k.cryptoapp.databinding.ItemCoinInfoBinding
-import com.leif2k.cryptoapp.utils.IMAGE_URL_HEADER
-import com.leif2k.cryptoapp.utils.convertTimestampToTime
+import com.leif2k.cryptoapp.common.IMAGE_URL_HEADER
+import com.leif2k.cryptoapp.common.convertTimestampToTime
 import com.squareup.picasso.Picasso
 
 class CoinsAdapter : ListAdapter<CoinFullInfo, CoinViewHolder>(CoinDiffCallback()) {

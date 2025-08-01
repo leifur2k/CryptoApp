@@ -1,4 +1,4 @@
-package com.leif2k.cryptoapp.presentation.recyclerview_coins
+package com.leif2k.cryptoapp.presentation.adapters
 
 import androidx.recyclerview.widget.DiffUtil
 import com.leif2k.cryptoapp.data.room.CoinFullInfo

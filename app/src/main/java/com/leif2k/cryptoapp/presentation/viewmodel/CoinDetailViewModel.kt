@@ -3,9 +3,8 @@ package com.leif2k.cryptoapp.presentation.viewmodel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.leif2k.cryptoapp.data.repository.CoinsRepositoryImpl
+import com.leif2k.cryptoapp.data.repositoryImpl.CoinsRepositoryImpl
 import com.leif2k.cryptoapp.data.room.CoinFullInfo
-import com.leif2k.cryptoapp.data.room.AppDatabase
 import com.leif2k.cryptoapp.domain.GetCoinFullInfoItemUseCase
 
 class CoinDetailViewModel(application: Application) : AndroidViewModel(application) {

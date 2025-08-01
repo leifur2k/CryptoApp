@@ -1,4 +1,4 @@
-package com.leif2k.cryptoapp.utils
+package com.leif2k.cryptoapp.common
 
 import android.util.Log
 
